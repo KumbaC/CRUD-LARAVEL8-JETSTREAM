@@ -66,7 +66,7 @@
 
 
   <div class="relative h-screen overflow-hidden bg-indigo-900">
-    <img src="storage/image/caracas.jpeg" class="absolute object-cover w-full h-full"/>
+    <img src="storage/image/caracas.jpg" class="absolute object-cover w-full h-full"/>
     <div class="absolute inset-0">
 
 
@@ -102,7 +102,7 @@
                     </thead>
                     <tbody>
                         @foreach($merca as $mercancia)
-                        
+
                         <tr>
                             <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
                                 <div class="flex items-center">
@@ -148,7 +148,7 @@
                         </form>
                         </tr>
                         @endforeach
-                        
+
                     </tbody>
 
                 </table>

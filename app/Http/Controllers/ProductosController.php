@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Mercancia;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 class ProductosController extends Controller
 {
     /**
@@ -14,10 +15,16 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        
-        $merca = Mercancia::with('user')->paginate(5);
-   
+        //Consulta paginada que se muestra en la vista. 
+       $merca = Mercancia::with('user')->paginate(5);
+
        return view('productos.index', compact('merca'));
+
+       //Consulta SQL a traves del Facades DB
+       //$producto = DB::select('SELECT id from mercancias where name = ?', ['Atun enlatado'] );
+
+         //dd($producto);
+
     }
 
     /**
@@ -52,7 +59,7 @@ class ProductosController extends Controller
      */
     public function show(Mercancia $mercancia)
     {
-        
+
     }
 
     /**

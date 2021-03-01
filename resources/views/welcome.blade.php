@@ -9,7 +9,7 @@
 <script src="{{ mix('js/app.js') }}" defer></script>
 
 <div class="relative h-screen overflow-hidden bg-indigo-900">
-    <img src="storage/image/caracas.jpeg" class="absolute object-cover w-full h-full"/>
+    <img src="storage/image/caracas.jpg" class="absolute object-cover w-full h-full"/>
     <div class="absolute inset-0 bg-black opacity-25">
     </div>
     <header class="absolute top-0 left-0 right-0 z-20">
@@ -29,7 +29,7 @@
                 <div class="items-center hidden md:flex">
                  @auth
                 <a href="{{ route('profile.show') }}" class="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">Mi Perfil</a>
-            
+
                  @else
                 <a href="{{ route('login') }}" class="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">Iniciar Sesion</a>
 
